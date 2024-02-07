@@ -24,4 +24,3 @@ while displaying:
     dt = clock.tick(60) / 1000 # tick locks fps to 60
 
 pygame.quit()
-print ("be very careful not to put anything lol")
