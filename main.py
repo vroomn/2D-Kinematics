@@ -23,5 +23,46 @@ while displaying:
     # Delta time between frames
     dt = clock.tick(60) / 1000 # tick locks fps to 60
 
-pygame.quit()
-print ("be very careful not to put anything lol")
+#Drawing objects
+ball = pygame.draw.circle (screen, pygame.Color(255, 0, 0, 255), (60, 110), 20 )
+ 
+
+#variables
+gravity = 1.0
+
+
+#circle class 
+class Ball:
+    def __init__(self,acceleration, angle, x_initialvel, y_initialvel, x_finalvel, y_finalvel, y_position, x_position):
+        self.accel = acceleration
+        self.angle = angle
+        self.initial_x = x_initialvel
+        self.initial_y = y_initialvel
+        self.x_final = x_finalvel
+        self.y_final = y_finalvel
+        self.y_pos = y_position
+        self.x_pos = x_position
+
+#drawing the circle
+        def draw_circle(self):
+            pygame.draw.circle (screen, pygame.Color(255, 0, 0, 255), (60, 110), 20 )
+            
+#gravity function
+#def if_falling ():
+    
+    
+
+
+angle_check = False
+
+while not angle_check: 
+    def less_than():
+        angle = int(input("Please enter the angle you want the ball to be fired at:")) 
+        if angle > 90:
+            return False
+        else: 
+            True
+    
+    
+    pygame.quit()
+
