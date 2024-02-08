@@ -26,4 +26,19 @@ while displaying:
     # Delta time between frames
     dt = clock.tick(60) / 1000 # tick locks fps to 60
 
+#valid_grav = False
+#gravity = 0
+#while not valid_grav:
+ #   gravity = abs(int(input("Enter a valid integer for the value of the gravitational pull:")))
+  #  print (gravity)
+   # if gravity < 0:
+    #    valid_grav = True
+
+#valid_speed = False
+#initial_speed = 0
+#while not valid_speed:
+ #   initial_speed = abs(int(input("Enter a valid integer for the value of the object's speed:")))
+  #  if initial_speed >= 1:
+   #     valid_speed = True
+
 pygame.quit()
