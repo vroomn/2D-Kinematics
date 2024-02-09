@@ -5,6 +5,7 @@ A simple simulation of an object flying out of a cannon at a specified velocity 
 I reccomend using python virtual enviroments  
 ```python -m venv 'YOUR NAME CHOICE'```  
 Then navigate to the "Scripts" directory and run either "Activate.ps1" or "activate.bat". Now that it's a virtual enviroment the project requries Pygame, so:  
+```pip install pygame```
 
 ## Documentation
 The entire simulation operates within the Pygame render loop, using ```PhysicsObject.physicsStep()``` within an if loop to control when the object is stimulated, and provide a floor for the object to hit. The simulation relies on the formula $\Delta y = (Velocity_{Inital\ y})(Time)+\frac{1}{2}(Gravity_{Acceleration})(Time)^2$ for the y component and $\Delta x = (Velocity_{Inital\ x})(Time)$ for the x component.
