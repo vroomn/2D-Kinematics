@@ -27,7 +27,7 @@ class PhysicsObject:
 
     def clampLaunchAngle(self, maxAngle) -> None:
         if self.launchAngle > maxAngle: self.launchAngle = maxAngle
-        elif self.launchAngle < 0: self.launchAngle = 0
+        elif self.launchAngle < 1: self.launchAngle = 1
 
     def draw(self, screen: pygame.Surface) -> None:
         pygame.gfxdraw.filled_circle(screen, int(self.position.x), int(self.position.y), self.radius, (self.color))
@@ -42,7 +42,7 @@ class PhysicsObject:
         self.position.x = ((self.initVelocity*math.cos(math.radians(self.launchAngle)))*time)*5
         pass
 
-physObject = PhysicsObject(50, 20, -10, 10, (255, 255, 255))
+physObject = PhysicsObject(50, -10, -10, 10, (255, 255, 255))
 
 dt = 0
 
@@ -58,7 +58,7 @@ while displaying:
 
     screen.fill((121, 125, 133))
 
-    if physObject.position.y < screen.get_height():
+    if physObject.position.y <= screen.get_height():
         physObject.physicsStep(initTick)
 
     physObject.draw(screen)
