@@ -10,8 +10,6 @@ pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
-ui = ui_system.UI()
-
 displaying = True
 while displaying:
     # Input and general event handler

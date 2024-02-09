@@ -1,6 +1,12 @@
 import pygame
 
 class UI:
-    def __init__(self) -> None:
+    def getAbsIntInput(msg: str) -> int:
+        while True:
+            try:
+                usrInput = abs(int(input(msg + " > ")))
+                break
+            except:
+                usrInput = abs(int(input("(Invalid Input) " + msg + " > ")))
         
-        pass
+        return usrInput
