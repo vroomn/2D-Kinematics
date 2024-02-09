@@ -18,7 +18,6 @@ class PhysicsObject:
         self.launchAngle = launchAngle
         self.clampLaunchAngle(90)
         self.gravity = gravity
-        self.dStartTime = 0
 
         # Rendering variables
         self.radius = radius
@@ -43,8 +42,6 @@ class PhysicsObject:
         pass
 
 physObject = PhysicsObject(50, -10, -10, 10, (255, 255, 255))
-
-dt = 0
 
 initTick = pygame.time.get_ticks()
 
