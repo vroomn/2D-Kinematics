@@ -14,7 +14,7 @@ screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
 
 initVelocity = UI.getAbsIntInput("What is the inital velocity")
-launchAngle = UI.getAbsIntInput("What is the launch angle")
+launchAngle = UI.getAbsIntInput("What is the launch angle (degrees)")
 gravity = UI.getAbsIntInput("What is the gravity (as a scalar)")
 print("Simulating...")
 
