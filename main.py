@@ -9,6 +9,7 @@ WIDTH = 1280
 # Height of the simulator window
 HEIGHT = 720
 
+# Pygame initalization and setup of the screen
 pygame.init()
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 clock = pygame.time.Clock()
@@ -20,9 +21,11 @@ print("Simulating...")
 
 physObject = PhysicsObject(initVelocity, launchAngle, -(gravity), 10, (255, 255, 255))
 
+# First tick of the distance sim
 initTick = pygame.time.get_ticks()
 
 displaying = True
+# Primary Render Loop
 while displaying:
     # Input and general event handler
     for event in pygame.event.get():
@@ -30,13 +33,16 @@ while displaying:
         if event.type == pygame.QUIT:
             displaying = False
 
+    # Set the background color
     screen.fill((121, 125, 133))
 
+    # Only step physics when not on ground
     if physObject.position.y <= screen.get_height():
         physObject.physicsStep(initTick, screen)
-
+    
     physObject.draw(screen)
 
+    # Switch the framebuffer
     pygame.display.flip()
     # Delta time between frames
     dt = clock.tick(60) / 1000 # tick locks fps to 60
